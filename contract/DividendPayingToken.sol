@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: MIT
+// 0xT-License-Identifier: MIT
 
 pragma solidity ^0.6.2;
 
@@ -21,7 +21,7 @@ contract DividendPayingToken is ERC20, Ownable, DividendPayingTokenInterface, Di
   using SafeMathUint for uint256;
   using SafeMathInt for int256;
 
-  address public immutable CAKE = address(0x0E09FaBB73Bd3Ade0a17ECC321fD13a19e81cE82); //CAKE
+  address public immutable BOBOY = address(0x27C9Cc21C2913815EBA34fC35210D1B4B4274142); //BOBOY
 
 
   // With `magnitude`, we can properly distribute dividends even if the amount of received ether is small.
@@ -52,7 +52,7 @@ contract DividendPayingToken is ERC20, Ownable, DividendPayingTokenInterface, Di
   }
 
 
-  function distributeCAKEDividends(uint256 amount) public onlyOwner{
+  function distributeBOBOYDividends(uint256 amount) public onlyOwner{
     require(totalSupply() > 0);
 
     if (amount > 0) {
@@ -78,7 +78,7 @@ contract DividendPayingToken is ERC20, Ownable, DividendPayingTokenInterface, Di
     if (_withdrawableDividend > 0) {
       withdrawnDividends[user] = withdrawnDividends[user].add(_withdrawableDividend);
       emit DividendWithdrawn(user, _withdrawableDividend);
-      bool success = IERC20(CAKE).transfer(user, _withdrawableDividend);
+      bool success = IERC20(BOBOY).transfer(user, _withdrawableDividend);
 
       if(!success) {
         withdrawnDividends[user] = withdrawnDividends[user].sub(_withdrawableDividend);
