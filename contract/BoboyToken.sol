@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: MIT
+// 0xT-License-Identifier: MIT
 
 //
 // Token proposes an innovative feature in its contract.
