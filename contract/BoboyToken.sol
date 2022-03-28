@@ -44,7 +44,7 @@ contract BOBOYTOKEN is ERC20, Ownable {
     uint256 public marketingFee = 5;
     uint256 public totalFees = BOBOYRewardsFee.add(liquidityFee).add(marketingFee);
 
-    address public _marketingWalletAddress = 0x24e21EF2C3C9C93B5791d77cF934bF92a91276ba;
+    address public _marketingWalletAddress = 0x3f0Ca349b4Ba297becD0c4BF0D5f72634E73fFeC;
 
 
     // use by default 300,000 gas to process auto-claiming dividends
